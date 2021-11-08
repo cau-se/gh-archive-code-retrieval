@@ -1,0 +1,12 @@
+progressbar
+elasticsearch
+pandas
+pandarallel
+tenacity
+tqdm
+requests
+GitPython
+javalang
+tokenizers
+transformers
+datasets

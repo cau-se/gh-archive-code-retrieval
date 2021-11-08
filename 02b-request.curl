@@ -1,0 +1,14 @@
+curl -X POST "localhost:9200/gh-archive/_search?size=0&pretty" -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "match": {
+      "type": {
+        "query": "PullRequestReviewCommentEvent"
+      }
+    }
+  },
+  "aggs" : {
+    "types_count" : { "terms" : { "field" : "repo.url.keyword", "size": "10000000" } }
+  }
+}
+' -o comments.json
